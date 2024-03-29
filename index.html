@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass 26</title>
+    <style>
+        body {
+            background: rgb(12, 134, 188);
+            background: linear-gradient(288deg, rgba(12, 134, 188, 1) 12%, rgba(3, 39, 116, 1) 32%, rgba(100, 18, 93, 1) 53%, rgba(65, 123, 127, 1) 69%, rgba(86, 150, 113, 1) 82%, rgba(160, 36, 60, 1) 92%);
+            min-height: 100vh;
+        }
+
+        .app-title {
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .emoji-container {
+            background-color: white;
+            width: 470px;
+            display: flex;
+            justify-content: center;
+            margin: 10px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+        }
+
+        .emoji1 {
+            height: 250px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .btn-toggle {
+            font-size: 20px;
+            padding: 5px 20px;
+            border-radius: 40px;
+            border: none;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .btn-toggle:hover {
+            box-shadow: 0 0 10px black;
+
+        }
+
+        @media screen and (max-width(600px)) {
+            .emoji-container {
+                width: 80%;
+            }
+
+            .emoji1 {
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="app-title">Emoji Toggler👍</h1>
+    <div class="emoji-container">
+        <img src="./img/smiling.png" class="emoji1" id="1Emoji" />
+    </div>
+    <div class="btn-container">
+        <button class="btn-toggle" onclick="toggleEmoji('smile')">Smiling</button>
+        <button class="btn-toggle" onclick="toggleEmoji('heart-eyes')">heart-eyes</button>
+        <button class="btn-toggle" onclick="toggleEmoji('star')">star</button>
+        <button class="btn-toggle" onclick="toggleEmoji('angry')">angry</button>
+    </div>
+
+    <script>
+        function toggleEmoji(state) {
+            const emojiElement = document.getElementById("1Emoji");
+            if (state == 'smile') {
+                emojiElement.src = './img/smiling.png';
+            }
+            else if (state == 'heart-eyes') {
+                emojiElement.src = './img/heart-eyes.png';
+            }
+            else if (state == 'star') {
+                emojiElement.src = './img/star.png';
+            }
+            else if (state == 'angry') {
+                emojiElement.src = './img/angry.png';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
